@@ -54,6 +54,10 @@ header {
     text-align: center;
     font-weight: bold;
     font-size: 3.2rem;
+	border: 2px solid var(--primary-color);
+	transition: all .2s ease 0s;
+
+
 }
 
 #accept {
@@ -107,21 +111,20 @@ header {
 
 
 .products {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     column-gap: 60px;
     row-gap: 60px;
     margin-top: 30px;
+	padding: 10px 20px;
 }
 
 
 .product {
     display: flex;
     height: 555px;
-    width: 335px;
+    width: 100%;
+	max-width: 100%;
     background-color: var(--background-twice);
     padding: 10px;
     border-radius: 25px;
@@ -133,12 +136,13 @@ header {
 
 .align_start {
     align-self: self-start;
+	margin-left: 18px;
 }
 
 .product_name {
     display: inline-block;
     width: 90%;
-    height: 24px;
+    height: 30px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -193,4 +197,14 @@ header {
     text-align: center;
     font-weight: bold;
     font-size: 3.2rem;
+	transition: all .2s ease 0s;
+	border: 2px solid var(--primary-color);
+
+
+	
+}
+
+#delete:hover, #submit:hover {
+	background-color: white;
+	color: var(--primary-color);
 }
